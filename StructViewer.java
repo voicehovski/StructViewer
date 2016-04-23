@@ -13,8 +13,15 @@ implements Runnable
   
   public void run (  ) {
     JFrame f = new JFrame ( WINDOW_HEADER );
+    
+    createUI ( f );
+    
     f .setDefaultCloseOperation ( DISPOSE_ON_CLOSE );
     f .pack (  );
     f .setVisible ( true );
+  }
+  
+  private static void createUI ( JFrame f ) {
+    f .setLayout (  );
   }
 }
