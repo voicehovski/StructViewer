@@ -5,9 +5,7 @@ import javax.swing.*;
 public class StructViewer
 implements Runnable
 {
-  public StructViewer (  ) {
-    
-  }
+  public static final String WINDOW_HEADER = "Struct viewer";
   
   public static void main ( String ... args ) {
     SwingUtilities .invokeLater ( new StructViewer (  ) )  
