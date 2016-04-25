@@ -24,7 +24,7 @@ implements Runnable
   private static void createUI ( JFrame f ) {
     JPanel treeView = new JPanel (  );
     TreeComponent treeComponent = new TreeComponent (  );
-    treeView .add ( treeCo );
+    treeView .add ( treeCom );
     JPanel controls = new JPanel (  );
     f .setLayout ( LayoutManager .BORDER_LAYOUT );
     f .add ( treeView, BorderLayout .CENTER );
