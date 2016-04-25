@@ -44,16 +44,25 @@ implements Runnable
       }
     }
     
-    treeType .addItemChangedListener (
-      new StateChangedListerner (  ) {
-        public void stateChanged (ItemEvent e) {
-          treeModel .setTreeType ( e .getSelectedItem (  ) );
+    treeType .addItemListener (
+      new ItemListerner (  ) {
+        public void itemStateChanged (ItemEvent e) {
+          //e .getItemSelectable (  )??
+          if (e .getStateChange () == ItemEvent .SELCTED)
+            treeModel .setTreeType ( e .getItem (  ) );
         }
       }
     );
-    treeType .addActionListener ( createA);
+    treeType .addActionListener ( createTreeAction );
     
-    isSorted .add
+    isSorted .addItemListener (
+      new ItemListener (  ) {
+        public void itemStateChanged (ItemEvent e) {
+          if (e .getStateChange () == ItemEvent .SELECTED)
+            treeModel .setSorted (  );
+        }
+      }
+    );
     
     f .setLayout ( LayoutManager .BORDER_LAYOUT );
     f .add ( treeView, BorderLayout .CENTER );
