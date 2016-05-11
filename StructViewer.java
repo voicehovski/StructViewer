@@ -6,6 +6,7 @@ public class StructViewer
 implements Runnable
 {
   public static final String WINDOW_HEADER = "Struct viewer";
+  public static final String ID = "72";
   
   public static void main ( String ... args ) {
     SwingUtilities .invokeLater ( new StructViewer (  ) )  
