@@ -1,0 +1,4 @@
+class TreeComponent
+extends JComponent {
+  
+}
